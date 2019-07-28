@@ -8,6 +8,21 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+//Tricks 
+//toString() === example
+//const mynumber = 200
+//mynNumber.toString().split('').join('') 
+// allows us to use the reserval tech shown so far. 
+
+//Math.sign() passes in a number thats positive and makes it one or negative brings out negative one
+//parseInt(myNumber.toString()) === to turn it back into a number
+function reverseInt(n) {
+    const reverse = n
+        .toString()
+        .split('')
+        .reverse()
+        .join('');
+    return parseInt(reverse) * Math.sign(n);
+}
 
 module.exports = reverseInt;
